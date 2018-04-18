@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace AFS\BusBundle;
 
 
-use AFS\BusBundle\DependencyInjection\Compiler\CreateBussesPass;
+use AFS\BusBundle\DependencyInjection\Compiler\ConfigureBusMiddlewarePass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -17,7 +17,7 @@ class AFSBusBundle extends Bundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new CreateBussesPass());
+        $container->addCompilerPass(new ConfigureBusMiddlewarePass());
     }
 
 }

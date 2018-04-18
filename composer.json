@@ -11,6 +11,9 @@
         "symfony/messenger": "^4.1",
         "symfony/yaml": "^4.1"
     },
+    "require-dev": {
+        "symfony/var-dumper": "^4.1"
+    },
     "autoload": {
         "psr-4": {
             "AFS\\BusBundle\\": ""
