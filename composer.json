@@ -1,14 +1,12 @@
 {
     "name": "afs/bus-bundle",
     "description": "Command- and EventBus Bundle",
-    "type": "project",
+    "type": "symfony-bundle",
     "license": "proprietary",
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2",
         "ext-iconv": "*",
-        "symfony/console": "^4.1",
-        "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.1",
         "symfony/messenger": "^4.1",
         "symfony/yaml": "^4.1"
@@ -26,5 +24,10 @@
         "symfony/polyfill-php71": "*",
         "symfony/polyfill-php70": "*",
         "symfony/polyfill-php56": "*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
     }
 }
