@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace AFS\BusBundle\Messenger\Middleware;
 
 
-use AFS\BussesBundle\Messenger\Exception\ChainHandlerForCommandException;
+use AFS\BusBundle\Messenger\Exception\ChainHandlerForCommandException;
 use Symfony\Component\Messenger\Handler\ChainHandler;
 use Symfony\Component\Messenger\HandlerLocatorInterface;
 use Symfony\Component\Messenger\MiddlewareInterface;
