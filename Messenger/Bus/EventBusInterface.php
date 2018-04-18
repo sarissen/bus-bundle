@@ -6,7 +6,9 @@ declare(strict_types=1);
 namespace AFS\BusBundle\Messenger\Bus;
 
 
-interface EventBusInterface
+use Symfony\Component\Messenger\MessageBusInterface;
+
+interface EventBusInterface extends MessageBusInterface
 {
 
 }
