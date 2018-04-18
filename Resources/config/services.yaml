@@ -8,10 +8,12 @@ services:
     command_bus:
         class: AFS\BusBundle\Messenger\Bus\CommandBus
         arguments: [ !tagged messenger.commandbus_middleware ]
+        public: true
 
     event_bus:
         class: AFS\BusBundle\Messenger\Bus\EventBus
         arguments: [ !tagged messenger.eventbus_middleware ]
+        public: true
 
     AFS\BusBundle\Messenger\Bus\CommandBusInterface:
         alias: command_bus
