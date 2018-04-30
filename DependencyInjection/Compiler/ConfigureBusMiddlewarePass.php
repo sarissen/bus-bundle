@@ -17,7 +17,7 @@ class ConfigureBusMiddlewarePass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        $loggingMiddleware = $container->getDefinition('messenger.middleware.debug.logging');
+        $loggingMiddleware = $container->getDefinition('messenger.middleware.logging');
         $loggingMiddleware->addTag('messenger.commandbus_middleware', [ 'priority' => 10 ]);
         $loggingMiddleware->addTag('messenger.eventbus_middleware', [ 'priority' => 10 ]);
 
