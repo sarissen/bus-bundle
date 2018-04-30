@@ -4,23 +4,6 @@ services:
     _defaults:
         public: false
 
-    # Bus
-    command_bus:
-        class: AFS\BusBundle\Messenger\Bus\CommandBus
-        arguments: [ !tagged messenger.commandbus_middleware ]
-        public: true
-
-    event_bus:
-        class: AFS\BusBundle\Messenger\Bus\EventBus
-        arguments: [ !tagged messenger.eventbus_middleware ]
-        public: true
-
-    AFS\BusBundle\Messenger\Bus\CommandBusInterface:
-        alias: command_bus
-
-    AFS\BusBundle\Messenger\Bus\EventBusInterface:
-        alias: event_bus
-
     # Middleware
     messenger.middleware.call_message_handler_command:
         class: AFS\BusBundle\Messenger\Middleware\HandleCommandMessageMiddleware
