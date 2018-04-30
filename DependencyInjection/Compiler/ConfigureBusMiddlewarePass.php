@@ -21,7 +21,7 @@ class ConfigureBusMiddlewarePass implements CompilerPassInterface
         $loggingMiddleware->addTag('messenger.commandbus_middleware', [ 'priority' => 10 ]);
         $loggingMiddleware->addTag('messenger.eventbus_middleware', [ 'priority' => 10 ]);
 
-        $sendMessageMiddleware = $container->getDefinition('messenger.asynchronous.middleware.send_message_to_producer');
+        $sendMessageMiddleware = $container->getDefinition('messenger.middleware.route_messages');
         $sendMessageMiddleware->addTag('messenger.commandbus_middleware', [ 'priority' => -5 ]);
         $sendMessageMiddleware->addTag('messenger.eventbus_middleware', [ 'priority' => -5 ]);
 
