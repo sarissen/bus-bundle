@@ -7,8 +7,8 @@ namespace AFS\BusBundle\Messenger\Middleware;
 
 
 use Symfony\Component\Messenger\Exception\NoHandlerForMessageException;
-use Symfony\Component\Messenger\HandlerLocatorInterface;
-use Symfony\Component\Messenger\MiddlewareInterface;
+use Symfony\Component\Messenger\Handler\Locator\HandlerLocatorInterface;
+use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
 
 class HandleEventMessageMiddleware implements MiddlewareInterface
 {

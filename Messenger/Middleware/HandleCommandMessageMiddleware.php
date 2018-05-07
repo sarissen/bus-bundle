@@ -8,8 +8,8 @@ namespace AFS\BusBundle\Messenger\Middleware;
 
 use AFS\BusBundle\Messenger\Exception\ChainHandlerForCommandException;
 use Symfony\Component\Messenger\Handler\ChainHandler;
-use Symfony\Component\Messenger\HandlerLocatorInterface;
-use Symfony\Component\Messenger\MiddlewareInterface;
+use Symfony\Component\Messenger\Handler\Locator\HandlerLocatorInterface;
+use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
 
 class HandleCommandMessageMiddleware implements MiddlewareInterface
 {

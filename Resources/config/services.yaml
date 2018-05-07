@@ -8,12 +8,8 @@ services:
     messenger.middleware.call_message_handler_command:
         class: AFS\BusBundle\Messenger\Middleware\HandleCommandMessageMiddleware
         arguments: [ '@messenger.handler_resolver' ]
-        tags:
-            - { name: 'messenger.commandbus_middleware', priority: -10 }
 
     messenger.middleware.call_message_handler_event:
         class: AFS\BusBundle\Messenger\Middleware\HandleEventMessageMiddleware
         arguments: [ '@messenger.handler_resolver' ]
-        tags:
-            - { name: 'messenger.eventbus_middleware', priority: -10 }
 
